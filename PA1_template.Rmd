@@ -1,13 +1,16 @@
 #Reproducible Research Assessment 1
+```{r loadpackages, message=FALSE, warning=FALSE}
+library(psych)
+library(plyr)
+library(ggplot2)
+library(reshape2)
+library(knitr)
+```
 
 ##Loading and preprocessing the data
 Show any code that is needed to Load the data (i.e. read.csv()).
 Process/transform the data (if necessary) into a format suitable for your analysis.
 ```{r loaddata, message=FALSE, warning=FALSE}
-library(psych)
-library(plyr)
-library(ggplot2)
-library(reshape2)
 df_act <- read.csv("./activity.csv")
 df_act$date = as.Date(df_act$date)
 ```
